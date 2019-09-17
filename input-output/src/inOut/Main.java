@@ -31,7 +31,10 @@ public class Main {
         System.out.println("Now print the file contents---------");
         System.out.println();
 
-//        File Dialog Box - shows up - this is instead of asking user to type file name as per below
+//        File Dialog Box - shows up - this is instead of asking user to type
+//        file name as per below - if using this, need to change 'in' in try
+//        catch block too
+
 //        JFileChooser chooser = new JFileChooser();
 //        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 //            File selectedFile = chooser.getSelectedFile();
