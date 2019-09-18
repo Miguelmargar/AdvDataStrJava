@@ -5,11 +5,11 @@ import java.nio.file.attribute.UserPrincipalNotFoundException;
 public class MergeSort {
     private int[] myArray;
 
-//    public MergeSort(int[] anArray) {
-//        myArray = anArray;
-//    }
+    public MergeSort(int[] anArray) {
+        myArray = anArray;
+    }
 
-    public int[] doSort(int[] myArray) {
+    public int[] doSort() {
 //        Base case
         if (myArray.length < 2) return myArray;
 
@@ -29,30 +29,35 @@ public class MergeSort {
             second[i] = myArray[first.length + i];
         }
 
+        MergeSort first2 = new MergeSort(first);
+        MergeSort second2 = new MergeSort(second);
+        int[] first2recur = first2.doSort();
+        int[] second2recur = second2.doSort();
+
 //        moves the smallest element of each array into the result array
         int iFirst = 0;
         int iSecond = 0;
         int j = 0;
 
-        while (iFirst < first.length && iSecond < second.length) {
-            if (first[iFirst] < second[iSecond]) {
-                result[j] = first[iFirst];
+        while (iFirst < first2recur.length && iSecond < second2recur.length) {
+            if (first2recur[iFirst] < second2recur[iSecond]) {
+                result[j] = first2recur[iFirst];
                 iFirst++;
             }
             else {
-                result[j] = second[iSecond];
+                result[j] = second2recur[iSecond];
                 iSecond++;
             }
             j++;
         }
 //      last remaining element of one or the other array to be pushed to the result array
-        while (iFirst < first.length) {
-            result[j] = first[iFirst];
+        while (iFirst < first2recur.length) {
+            result[j] = first2recur[iFirst];
             iFirst++;
             j++;
         }
-        while (iSecond < second.length) {
-            result[j] = second[iSecond];
+        while (iSecond < second2recur.length) {
+            result[j] = second2recur[iSecond];
             iSecond++;
             j++;
         }
