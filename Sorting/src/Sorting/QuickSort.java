@@ -27,7 +27,8 @@ public class QuickSort {
 
 //      sort each item and send to the appropiate array
         while (myArray.size() > 0) {
-            System.out.println("Array size inside while is:" + myArray.size());
+//            System.out.println("Array size inside while is:" + myArray.size());
+
             if (myArray.get(0) < pivot.get(0)) {
                 smaller.add(myArray.get(0));
                 myArray.remove(0);
@@ -45,18 +46,15 @@ public class QuickSort {
 //      Recursively do the same to each of the above arrays and return the sum
 //      of the three arrays
         QuickSort finalP = new QuickSort(pivot);
-        ArrayList<Integer> finalPivot = finalP.doSort();
 
         QuickSort finalS = new QuickSort(smaller);
-        ArrayList<Integer> finalSmaller = finalS.doSort();
 
         QuickSort finalB = new QuickSort(bigger);
-        ArrayList<Integer> finalBigger = finalB.doSort();
 
         ArrayList<Integer> finalArr = new ArrayList<Integer>();
-        finalArr.addAll(finalSmaller);
-        finalArr.addAll(finalPivot);
-        finalArr.addAll(finalSmaller);
+        finalArr.addAll(finalS.doSort());
+        finalArr.addAll(finalP.doSort());
+        finalArr.addAll(finalB.doSort());
 
         return finalArr;
     }
