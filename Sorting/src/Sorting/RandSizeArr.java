@@ -3,7 +3,7 @@ package Sorting;
 import org.w3c.dom.ls.LSOutput;
 
 public class RandSizeArr {
-    int size = 4000 + (int)(Math.random() * 5001);
+    int size = (int)(Math.random() * 1000);
 
     public int[] getRandArray() {
         System.out.println("Array size is: " + size);

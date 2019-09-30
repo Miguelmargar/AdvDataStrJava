@@ -25,7 +25,7 @@ public class QuickSort {
         ArrayList<Integer> smaller = new ArrayList<Integer>();
         ArrayList<Integer> bigger = new ArrayList<Integer>();
 
-//      sort each item and send to the appropiate array
+//      sort each item and send to the appropriate array
         while (myArray.size() > 0) {
 //            System.out.println("Array size inside while is:" + myArray.size());
 
@@ -41,6 +41,12 @@ public class QuickSort {
                 bigger.add(myArray.get(0));
                 myArray.remove(0);
             }
+        }
+
+        if (pivot.size() > 1) {
+            System.out.println("hello");
+            smaller.addAll(pivot.subList(1, pivot.size()));
+            pivot.subList(1, pivot.size()).clear();
         }
 
 //      Recursively do the same to each of the above arrays and return the sum
