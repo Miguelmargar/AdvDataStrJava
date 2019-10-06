@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="advDataStrJava/src"/>
+	<classpathentry kind="src" path="challenge/src"/>
+	<classpathentry kind="src" path="EnglishRuler/src"/>
+	<classpathentry kind="src" path="input-output/src"/>
+	<classpathentry kind="src" path="interfaces/src"/>
+	<classpathentry kind="src" path="Sorting/src"/>
+	<classpathentry kind="src" path="spans/src"/>
+	<classpathentry kind="output" path="EnglishRuler/out/production/EnglishRuler"/>
+</classpath>
