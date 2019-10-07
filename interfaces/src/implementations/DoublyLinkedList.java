@@ -1,4 +1,4 @@
-package queue;
+package implementations;
 
 public class DoublyLinkedList<E> {
 

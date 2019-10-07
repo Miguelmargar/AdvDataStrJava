@@ -1,4 +1,5 @@
 package stack;
+import implementations.*;
 
 public class LinkedStack<E> implements Stack<E> {
 

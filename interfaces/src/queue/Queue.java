@@ -1,4 +1,5 @@
 package queue;
+import implementations.*;
 
 public interface Queue<E> {
 	
