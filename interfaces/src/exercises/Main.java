@@ -1,4 +1,7 @@
-package stack;
+package exercises;
+import implementations.*;
+import queue.*;
+import stack.*;
 
 public class Main {
 
