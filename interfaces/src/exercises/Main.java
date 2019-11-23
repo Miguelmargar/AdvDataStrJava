@@ -6,11 +6,19 @@ import stack.*;
 public class Main {
 
 	public static void main(String[] args) {
-		String a = "ana";
-		pallindromeStack(a);
-		pallindromeListStack(a);
+//		String a = "ana";
+//		pallindromeStack(a);
+//		pallindromeListStack(a);
+//		System.out.println(spaces(5).length());
 	}
 
+//	to check TreeApplications file
+	public static String spaces(int d) {
+		StringBuilder s = new StringBuilder(d);
+		for(int i = 0; i < d; i++) s.append(" ");
+		return s.toString();
+	}
+	
 	public static void pallindromeStack(String a) {
 		StringBuilder check = new StringBuilder();
 		
