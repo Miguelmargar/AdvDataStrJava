@@ -1,8 +1,6 @@
 /exercises/
 /implementations/
+/list/
 /queue/
 /stack/
-/iterator/
-/list/
-/List.class
-/List/
+/tree/
