@@ -49,15 +49,15 @@ public class TreeApplications {
 	}
 	
 //	computes coordinates at which to draw positions of a binary tree
-	public static<E> int layout(BinaryTree<E> T, Position<E> p, int d, int x) {
-		if (T.left(p) != null)
-			x = layout(T, T.left(p), d + 1, x);
-		p.getElement().setX(x++);  // assume setX is defined
-		p.getElement().setY(d);    // assume setY is defined 
-		if (T.right(p) != null)
-			x = layout(T, T.right(p), d + 1, x);
-		return x;
-	}
+//	public static<E> int layout(BinaryTree<E> T, Position<E> p, int d, int x) {
+//		if (T.left(p) != null)
+//			x = layout(T, T.left(p), d + 1, x);
+//		p.getElement().setX(x++);  // assume setX is defined
+//		p.getElement().setY(d);    // assume setY is defined 
+//		if (T.right(p) != null)
+//			x = layout(T, T.right(p), d + 1, x);
+//		return x;
+//	}
 	
 //	returns total disk space for subtree of T rooted at p
 	public static int diskSpace(Tree<Integer> T, Position<Integer> p) {
@@ -66,5 +66,4 @@ public class TreeApplications {
 			subtotal += diskSpace(T, c);
 		return subtotal;
 	}
-	
 }
